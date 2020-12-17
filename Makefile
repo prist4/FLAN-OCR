@@ -1,6 +1,6 @@
 # Simple SDL mini Makefile
 
-CC=gcc
+CC=gcc -rdynamic
 
 CPPFLAGS =  `pkg-config gtk+-3.0 --cflags sdl` -MMD
 CFLAGS = -Wall -Wextra -std=c99 -g
@@ -16,6 +16,6 @@ all: main
 main: $(OBJ)
 
 clean:
-	$(RM) $(OBJ) $(OBJ_TESTS) $(DEP) $(DEP_TESTS)
+	$(RM) $(OBJ) $(OBJ_TESTS) $(DEP) $(DEP_TESTS) 
 
 # END
