@@ -16,6 +16,6 @@ all: main
 main: $(OBJ)
 
 clean:
-	$(RM) $(OBJ) $(OBJ_TESTS) $(DEP) $(DEP_TESTS) 
+	$(RM) $(OBJ) $(OBJ_TESTS) $(DEP) $(DEP_TESTS) main && clear
 
 # END
