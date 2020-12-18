@@ -107,8 +107,8 @@ void cuttedSurface(SDL_Surface *img, int firstCut,int lastCut, struct Neuronal_N
     {
         for(int j = 0; j < copy -> h; j++)
         {
-        pixel = getpixel(img, i, firstCut + j);
-        putpixel(copy, i, j, pixel);
+            pixel = getpixel(img, i, firstCut + j);
+            putpixel(copy, i, j, pixel);
         }
     }
     //Cut the characters
@@ -169,16 +169,16 @@ void charCut(SDL_Surface *img)
 }
 void isolateChar(SDL_Surface *img, struct Neuronal_Network *net)
 {
-  //Variables
-  Uint32 pixel;
-  Uint8 r ;
-  Uint8 g;
-  Uint8 b;
-  int firstCut;
-  int lastCut = -1;
-  int lastRead = -1;
-  SDL_Surface* copy = NULL;
-  SDL_Surface *resize = NULL;
+    //Variables
+    Uint32 pixel;
+    Uint8 r ;
+    Uint8 g;
+    Uint8 b;
+    int firstCut;
+    int lastCut = -1;
+    int lastRead = -1;
+    SDL_Surface* copy = NULL;
+    SDL_Surface *resize = NULL;
 
   for(int i = 0; i < img -> w; i++)
   {
@@ -193,12 +193,12 @@ void isolateChar(SDL_Surface *img, struct Neuronal_Network *net)
                 firstCut = i + 1;
                 pixel = getpixel(img, firstCut, 0);
                 SDL_GetRGB(pixel, img -> format, &r, &g, &b);
-            while(r == 255 && g == 0 && b == 0)
-            {
-                firstCut++;
-                pixel = getpixel(img, firstCut, 0);
-                SDL_GetRGB(pixel, img -> format, &r, &g, &b);
-            }
+                while(r == 255 && g == 0 && b == 0)
+                {
+                    firstCut++;
+                    pixel = getpixel(img, firstCut, 0);
+                    SDL_GetRGB(pixel, img -> format, &r, &g, &b);
+                }
 
             //Search for second Cut
             for(int j = firstCut + 1; j < img -> w; j++)
