@@ -9,7 +9,7 @@ Simple usage :<br />
 	- Launch OCR<br />
 
 You can also save text in a file.<br />
-You can train neuronal network, you weight aren't stored.<br />
+You can train neuronal network, if your weight aren't stored.<br />
 <br />
 This Optical Character Recognition has been mad by FLAN team:<br />
 	- Aurore Bozec<br />
